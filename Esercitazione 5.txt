@@ -1,0 +1,25 @@
+punto 3
+In questa esercitazione realizziamo il ciclo A+ B+ B- A- composto da 4 fasi.
+IL primo passo è la stesura del grafcet contratto che, rispetto al grafcet standard, 
+ci permette di incorporare 2 fasi in una unica fase e quindi utilizzate 1 solo relé 
+per gestire tutto il circuito.
+
+[inserire equazione logica] X=[a0 start + x] . b1negato        
+
+Stabilito il grafcet contratto e l'equazione logica di X, si può passsare alla
+stesura della rete ladder che andrà a costituire il nostro circuito finale da realizzare
+sul banco dei relè
+
+Punto 4
+In quest'altra prova effettuiamo il ciclo A+ B+ A- A+ B- A- costituito da ben 6 fasi.
+Rispetto al precendente caso, producendo il grafcet contratto ci ritroviamo
+con la necessità di dover utilizzare due relé, e non più semplicemente 1 (X ed Y) poichè le fasi contratte
+presenti sono 4.
+ [inserire equazione logica] X=(a0 . start . y + x) . (a0negato + y)
+                             Y=(b0 . xnegato + y) . (b1negato + xnegato)
+
+Anche in questo caso dopo aver generato il grafcet contratto dell'intero ciclo,
+andiamo a creare la rete ladder che verrà riprodotta sul banco relè in modo 
+da garantire il corretto funzionamente del nostro ciclo.
+
+
