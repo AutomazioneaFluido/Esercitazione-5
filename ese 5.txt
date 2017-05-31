@@ -1,0 +1,116 @@
+Introduzione
+
+Questa esercitazione è finalizzata alla verifica del funzionamento di alcuni componenti elettropneumatici e alla realizzazione di circuiti atti a svolgere diverse e specifiche funzioni.
+L’esercitazione si struttura in quattro prove:
+1) Verificare il funzionamento dei seguenti componenti elettropneumatici: valvola monostabile (comando diretto e comando indiretto con relè).
+2) Assemblare dei circuiti che realizzino le seguenti funzioni logiche: YES, OR (diretto ed indiretto con relè), AND (diretto ed indiretto con relè), autoaggancio.
+3) Realizzare un circuito con attuatori pilotati da relè che realizzi il seguente diagramma movimento fasi:
+
+[inserire il primo diagramma movimento fasi che sta nel testo dell'esercitazione]
+
+4) Realizzare un circuito con attuatori pilotati da relè che realizzi il seguente diagramma movimento fasi:
+
+[inserire il secondo diagramma movimento fasi che sta nel testo dell'esercitazione]
+
+
+Prova 1
+
+Strumenti utilizzati
+
+-Banco dei relè, che comprende:
+Valvola monostabile a pulsante
+Valvola bistabile a leva
+Valvola monostabile a pulsante di emergenza
+Lampadine elettriche x2
+Lampadine pneumatiche x2
+Valvola monostabile a comando elettropneumatico
+Valvola bistabile a comando elettropneumatico
+Switch di accensione/spegnimento
+Relè x2
+-Tubi in poliuretano
+-Cavi elettrici
+-Alimentazione (aria compressa)
+-Alimentazione (energia elettrica 24V
+
+
+Descrizione
+
+Avvalendoci soltanto del banco dei relè, verifichiamo come prima istanza il funzionamento della valvola monostabile attraverso comando diretto e attraverso il relè, e ripetiamo lo stesso esperimento con la valvola bistabile. Costruiamo dei circuiti partendo dal collegamento dei cavetti elettrici che portano la corrente a tensioni 0-24V nella linea da dove in seguito collegheremo altri cavi che porteranno in tensione gli elementi elettropneumatici utili alla nostra prova (valvola monostabile a comando elettropneumatico e valvola bistabile a comando elettropneumatico). La prima parte viene svolta senza l’impiego dei relè, quindi colleghiamo direttamente l’alimentazione di aria compressa alle valvole e di seguito alle lampadine pneumatiche che ne constateranno le commutazioni quando si premeranno i pulsanti o si gireranno le leve, che porteremo in tensione. Per la seconda parte della prova è necessario avvalersi dei relè. 
+La presenza di corrente nella bobina è governata dal circuito di comando che formiamo partendo dal pulsante o dalla leva, che realizza le condizioni di attivazione delle due valvole elettropneumatiche.
+
+[inserire 4 grafici nella seguente successione chiamati su github: valvola monostabile - valvola monostabile comando diretto/indiretto - valvola bistabile - valvola bistabile azionamento]
+
+
+Prova 2
+
+Strumenti Utilizzati
+
+-Banco dei relè, che comprende:
+Valvola monostabile a pulsante
+Valvola bistabile a leva
+Valvola monostabile a pulsante di emergenza
+Lampadine elettriche x2
+Lampadine pneumatiche x2
+Valvola monostabile a comando elettropneumatico
+Valvola bistabile a comando elettropneumatico
+Switch di accensione/spegnimento
+Relè x2
+-Tubi in poliuretano
+-Cavi elettrici
+-Alimentazione (aria compressa)
+-Alimentazione (energia elettrica 24V)
+
+
+Descrizione
+
+Sullo stesso banco assembliamo dei circuiti che realizzino delle funzioni logiche. Per la realizzazione della funzione logica YES usiamo la valvola bistabile a leva. Quando c’è la presenza di comando la valvola viene commutata e l’aria compressa passa e accende la lampadina a sinistra o a destra dipendentemente dalla posizione della leva.
+L'operatore logico OR si realizza collegando in parallelo più interruttori. In ambito elettrico due dispositivi si dicono in parallelo quando hanno in comune entrambi gli estremi di connessione. Nel nostro caso infatti colleghiamo in parallelo il pulsante alla valvola monostabile, per il caso del comando diretto. Per il comando indiretto tramite relè invece il collegamento in parallelo si effettua ai morsetti del comando della monostabile.
+Nella connessione AND, l’operatore logico si realizza collegando in serie più interruttori. In ambito elettrico due dispositivi si dicono in serie quando hanno in comune solo uno degli estremi di connessione. La realizzazione è analoga al caso OR.
+Infine per quanto riguarda l’autoaggancio, lo scopo principale è di evitare la ripartenza automatica (rieccitazione della bobina) a seguito dell' interruzione dell' alimentazione. Quindi costruiamo il nostro circuito in modo che, per mezzo del pulsante chiuso e la bobina del relè, percorsa da corrente, si crea un campo elettromagnetico destinato ad agire, in questo caso, su un ulteriore contatto. Infatti, oltre a comandare quello che governa il circuito esterno, opera anche su un secondo il quale si sposta in modo da garantire l'alimentazione alla bobina anche quando verrà rilasciato il pulsante di comando.
+
+[inserire i seguenti grafici: valv. monost. comando diretto/indiretto (sarebbe lo YES) - OR - AND - Autoaggancio]
+
+
+Prova 3 e 4
+
+Strumenti Utilizzati
+
+-Banco dei relè, che comprende:
+Valvola monostabile a pulsante
+Valvola bistabile a leva
+Valvola monostabile a pulsante di emergenza
+Lampadine elettriche x2
+Lampadine pneumatiche x2
+Valvola monostabile a comando elettropneumatico
+Valvola bistabile a comando elettropneumatico
+Switch di accensione/spegnimento
+Relè x2
+-Banco degli attuatori, che comprende:
+Cilindri pneumatici a doppio effetto x3
+Valvole bistabili a comando elettropneumatico x3
+Valvole monostabili di fine corsa a comando elettropneumatico x6
+-Tubi in poliuretano
+-Cavi elettrici
+-Alimentazione (aria compressa)
+-Alimentazione (energia elettrica 24V)
+
+Descrizio Prova 3
+Realizziamo il ciclo A+ B+ B- A- composto da 4 fasi. Il primo passo è la stesura del grafcet contratto che, rispetto al grafcet standard, ci permette di incorporare 2 fasi in un'unica fase contratta e quindi utilizzare 1 solo relè per gestire tutto il circuito.
+
+[inserire grafcet 1]
+[inserire equazione logica] X=[a0 start + x] . b1negato
+
+Dopo aver stabilito il grafcet contratto e l'equazione logica di X, si può passare alla stesura della rete ladder che andrà a costituire il nostro circuito finale da realizzare sul banco dei relè.
+
+[inserire ladder 1]
+
+Descrizione Prova 4
+In quest'altra prova effettuiamo il ciclo A+ B+ A- A+ B- A- costituito da ben 6 fasi. Rispetto al precedente caso, costruendo il grafcet contratto, ci ritroviamo con la necessità di dover utilizzare due relè, e non più semplicemente 1 (X ed Y) poiché le fasi contratte presenti sono 4.
+
+[inserire grafcet 2]
+[inserire equazione logica] X=(a0 . start . y + x) . (a0negato + y)
+Y=(b0 . xnegato + y) . (b1negato + xnegato)
+
+Anche in questo caso dopo aver generato il grafcet contratto dell'intero ciclo, andiamo a creare la rete ladder che verrà riprodotta sul banco relè in modo da garantire il corretto funzionamento del nostro ciclo.
+
+[inserire ladder 2]
